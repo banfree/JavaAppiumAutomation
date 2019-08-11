@@ -3,13 +3,13 @@ import org.junit.Test;
 
     public class MainClassTest extends MainClass {
         @Test
-        public void firstTest() {
-            int a = this.getLocalNumber();
+        public void testGetClassNumber() {
+            int a = this.getClassNumber();
 
-            if (a == 14) {
-                System.out.println("True");
+            if (a > 45) {
+                System.out.println("True, method GetClassNumber returns a number that is more than 45");
             } else {
-                Assert.fail("The returned number in the getLocalNumber method != 14");
+                Assert.fail("Method GetClassNumber returns a number that is less than or equal to 45");
             }
         }
     }
