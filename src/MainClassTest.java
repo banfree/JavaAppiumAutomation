@@ -3,15 +3,17 @@ import org.junit.Test;
 
     public class MainClassTest extends MainClass {
         @Test
-        public void testGetClassNumber() {
-            int a = this.getClassNumber();
+        public void testGetClassString() {
+            String a = this.getClassString();
 
-            if (a > 45) {
-                System.out.println("True, method GetClassNumber returns a number that is more than 45");
+            if (a.contains("Hello") || a.contains("hello") ) {
+                System.out.println("True, the getClassString method returns a string that contains “hello” or “Hello”");
             } else {
-                Assert.fail("Method GetClassNumber returns a number that is less than or equal to 45");
+                Assert.fail("The getClassString method doesn't return a string that contains “hello” or “Hello”");
             }
         }
     }
 
 
+
+    
